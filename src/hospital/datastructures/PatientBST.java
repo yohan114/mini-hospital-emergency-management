@@ -249,9 +249,18 @@ public class PatientBST {
             return;
         }
         printSideways(current.right, depth + 1);
-        System.out.println("     ".repeat(depth) + "[" + current.patient.getPatientId() + "] "
+        System.out.println(indent(depth) + "[" + current.patient.getPatientId() + "] "
                 + current.patient.getName());
         printSideways(current.left, depth + 1);
+    }
+
+    /** Written as a loop instead of String.repeat so the project also builds on Java 8. */
+    private static String indent(int depth) {
+        StringBuilder spaces = new StringBuilder();
+        for (int i = 0; i < depth; i++) {
+            spaces.append("     ");
+        }
+        return spaces.toString();
     }
 
     /**
