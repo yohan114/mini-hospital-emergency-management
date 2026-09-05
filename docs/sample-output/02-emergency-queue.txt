@@ -1,0 +1,356 @@
+=================================================================================
+        MINI HOSPITAL EMERGENCY MANAGEMENT SYSTEM
+        CIT300 - Data Structures and Algorithms
+=================================================================================
+   Patient records ......... Binary Search Tree
+   Emergency unit .......... Queue  (First In, First Out)
+   Treatment history ....... Stack  (Last In, First Out)
+   Patient visit history ... Singly Linked List
+=================================================================================
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+=================================================================================
+  LOAD SAMPLE DATA
+=================================================================================
+  > Sample hospital data loaded:
+      8 patient records inserted into the BST
+      5 past visits added to three linked lists
+      2 completed treatments pushed onto the stack
+      3 patients waiting in the emergency queue
+
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         8 patient(s)
+  Queue (FIFO)         Emergency unit          3 waiting
+  Stack (LIFO)         Treatment history       2 record(s)
+  Singly Linked List   Patient visit history   5 visit(s) in total
+
+  Lowest  Patient ID : 101 (Anusha Jayasinghe)
+  Highest Patient ID : 110 (Dinesh Rathnayake)
+  BST height         : 3  (a search compares at most 4 record(s))
+  Next to be treated : Nimal Perera (EC-001)
+  Last treatment     : TR-002 - Shanika De Silva
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-05 20:30:49 |
+| 2   | EC-002  | 110    | Dinesh Rathnayake    | Motorbike accident     | 2026-09-05 20:30:49 |
+| 3   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 3   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Next patient to be treated
+---------------------------------------------------------------------------------
+  Case ID   : EC-001
+  Patient   : Nimal Perera (ID 105)
+  Reason    : Severe chest pain
+  Arrived   : 2026-09-05 20:30:49
+
+  The patient stays in the queue - peek only looks at the front.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a patient to the emergency queue
+---------------------------------------------------------------------------------
+  Patient ID : 104
+  Patient    : Ravi Bandara (Diabetes)
+  Reason for emergency : Severe hypoglycaemia
+
+  > EC-004 added to the rear of the queue.
+    Patient : Ravi Bandara (ID 104)
+    Arrived : 2026-09-05 20:30:49
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-05 20:30:49 |
+| 2   | EC-002  | 110    | Dinesh Rathnayake    | Motorbike accident     | 2026-09-05 20:30:49 |
+| 3   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-05 20:30:49 |
+| 4   | EC-004  | 104    | Ravi Bandara         | Severe hypoglycaemia   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 4   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Treat the next patient
+---------------------------------------------------------------------------------
+  Front of the queue : EC-001 - Nimal Perera (Severe chest pain)
+
+  Doctor Name      : Dr. Silva
+  Diagnosis        : Acute chest pain
+  Treatment Given  : ECG and cardiac medication
+
+  > EC-001 removed from the front of the queue (dequeue).
+  > Visit V-006 added to the visit history of Nimal Perera (linked list).
+  > Record TR-003 pushed onto the treatment history (stack).
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-002  | 110    | Dinesh Rathnayake    | Motorbike accident     | 2026-09-05 20:30:49 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-05 20:30:49 |
+| 3   | EC-004  | 104    | Ravi Bandara         | Severe hypoglycaemia   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 3   Next to be treated: Dinesh Rathnayake
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-002  | 110    | Dinesh Rathnayake    | Motorbike accident     | 2026-09-05 20:30:49 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-05 20:30:49 |
+| 3   | EC-004  | 104    | Ravi Bandara         | Severe hypoglycaemia   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 3   Next to be treated: Dinesh Rathnayake
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+  Remove a waiting patient from the queue
+---------------------------------------------------------------------------------
+  Patient ID : 110
+
+  > EC-002 (Dinesh Rathnayake) was removed from the queue without treatment.
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-05 20:30:49 |
+| 2   | EC-004  | 104    | Ravi Bandara         | Severe hypoglycaemia   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 2   Next to be treated: Malini Gunawardena
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-05 20:30:49 |
+| 2   | EC-004  | 104    | Ravi Bandara         | Severe hypoglycaemia   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 2   Next to be treated: Malini Gunawardena
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Treat the next patient
+---------------------------------------------------------------------------------
+  Front of the queue : EC-003 - Malini Gunawardena (Breathing difficulty)
+
+  Doctor Name      : Dr. Perera
+  Diagnosis        : Asthma attack
+  Treatment Given  : Nebulizer treatment
+
+  > EC-003 removed from the front of the queue (dequeue).
+  > Visit V-007 added to the visit history of Malini Gunawardena (linked list).
+  > Record TR-004 pushed onto the treatment history (stack).
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-004  | 104    | Ravi Bandara         | Severe hypoglycaemia   | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 1   Next to be treated: Ravi Bandara
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Treat the next patient
+---------------------------------------------------------------------------------
+  Front of the queue : EC-004 - Ravi Bandara (Severe hypoglycaemia)
+
+  Doctor Name      : Dr. Karunaratne
+  Diagnosis        : Low blood sugar
+  Treatment Given  : Glucose drip
+
+  > EC-004 removed from the front of the queue (dequeue).
+  > Visit V-008 added to the visit history of Ravi Bandara (linked list).
+  > Record TR-005 pushed onto the treatment history (stack).
+
+  The emergency queue is empty - no patients are waiting.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Treat the next patient
+---------------------------------------------------------------------------------
+  ! The emergency queue is empty - nobody is waiting.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Next patient to be treated
+---------------------------------------------------------------------------------
+  ! The emergency queue is empty - nobody is waiting.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+=================================================================================
+  Thank you for using the Mini Hospital Emergency Management System.
+=================================================================================

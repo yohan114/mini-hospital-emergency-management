@@ -1,0 +1,27 @@
+6
+2
+4
+3
+1
+104
+Severe hypoglycaemia
+2
+Dr. Silva
+Acute chest pain
+ECG and cardiac medication
+4
+5
+110
+4
+2
+Dr. Perera
+Asthma attack
+Nebulizer treatment
+2
+Dr. Karunaratne
+Low blood sugar
+Glucose drip
+2
+3
+0
+0

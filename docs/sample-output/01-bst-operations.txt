@@ -1,0 +1,355 @@
+=================================================================================
+        MINI HOSPITAL EMERGENCY MANAGEMENT SYSTEM
+        CIT300 - Data Structures and Algorithms
+=================================================================================
+   Patient records ......... Binary Search Tree
+   Emergency unit .......... Queue  (First In, First Out)
+   Treatment history ....... Stack  (Last In, First Out)
+   Patient visit history ... Singly Linked List
+=================================================================================
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+=================================================================================
+  LOAD SAMPLE DATA
+=================================================================================
+  > Sample hospital data loaded:
+      8 patient records inserted into the BST
+      5 past visits added to three linked lists
+      2 completed treatments pushed onto the stack
+      3 patients waiting in the emergency queue
+
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         8 patient(s)
+  Queue (FIFO)         Emergency unit          3 waiting
+  Stack (LIFO)         Treatment history       2 record(s)
+  Singly Linked List   Patient visit history   5 visit(s) in total
+
+  Lowest  Patient ID : 101 (Anusha Jayasinghe)
+  Highest Patient ID : 110 (Dinesh Rathnayake)
+  BST height         : 3  (a search compares at most 4 record(s))
+  Next to be treated : Nimal Perera (EC-001)
+  Last treatment     : TR-002 - Shanika De Silva
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  All patient records in ascending order of Patient ID:
+
++--------+----------------------+------+----------------+------------------------+
+| ID     | NAME                 | AGE  | CONTACT        | MEDICAL CONDITION      |
++--------+----------------------+------+----------------+------------------------+
+| 101    | Anusha Jayasinghe    | 28   | 0754567890     | Severe migraine        |
+| 102    | Kamala Silva         | 32   | 0712345678     | Fractured arm          |
+| 103    | Shanika De Silva     | 56   | 0708901234     | Kidney stones          |
+| 104    | Ravi Bandara         | 51   | 0785678901     | Diabetes               |
+| 105    | Nimal Perera         | 45   | 0771234567     | Chest pain             |
+| 107    | Malini Gunawardena   | 39   | 0776789012     | Asthma attack          |
+| 108    | Sunil Fernando       | 67   | 0763456789     | High blood pressure    |
+| 110    | Dinesh Rathnayake    | 23   | 0727890123     | Road accident injury   |
++--------+----------------------+------+----------------+------------------------+
+  Total patients: 8
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+  Tree drawn on its side, the root is on the left:
+
+          [110] Dinesh Rathnayake
+     [108] Sunil Fernando
+          [107] Malini Gunawardena
+[105] Nimal Perera
+          [104] Ravi Bandara
+               [103] Shanika De Silva
+     [102] Kamala Silva
+          [101] Anusha Jayasinghe
+
+  Nodes: 8   Height: 3
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Register a new patient
+---------------------------------------------------------------------------------
+  Patient ID (number) : 106
+  Patient Name        : Tharindu Silva
+  Age                 : 34
+  Contact Number      : 0759988776
+  Medical Condition   : Dengue fever
+
+  > Patient registered and inserted into the BST.
+    Insert path : 105 -> 108 -> 107 -> 106
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  All patient records in ascending order of Patient ID:
+
++--------+----------------------+------+----------------+------------------------+
+| ID     | NAME                 | AGE  | CONTACT        | MEDICAL CONDITION      |
++--------+----------------------+------+----------------+------------------------+
+| 101    | Anusha Jayasinghe    | 28   | 0754567890     | Severe migraine        |
+| 102    | Kamala Silva         | 32   | 0712345678     | Fractured arm          |
+| 103    | Shanika De Silva     | 56   | 0708901234     | Kidney stones          |
+| 104    | Ravi Bandara         | 51   | 0785678901     | Diabetes               |
+| 105    | Nimal Perera         | 45   | 0771234567     | Chest pain             |
+| 106    | Tharindu Silva       | 34   | 0759988776     | Dengue fever           |
+| 107    | Malini Gunawardena   | 39   | 0776789012     | Asthma attack          |
+| 108    | Sunil Fernando       | 67   | 0763456789     | High blood pressure    |
+| 110    | Dinesh Rathnayake    | 23   | 0727890123     | Road accident injury   |
++--------+----------------------+------+----------------+------------------------+
+  Total patients: 9
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Search for a patient
+---------------------------------------------------------------------------------
+  Patient ID : 103
+
+  Comparisons made : 105 -> 102 -> 104 -> 103
+
+  Patient found:
+  Patient ID        : 103
+  Name              : Shanika De Silva
+  Age               : 56
+  Contact Number    : 0708901234
+  Medical Condition : Kidney stones
+  Recorded Visits   : 0
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Search for a patient
+---------------------------------------------------------------------------------
+  Patient ID : 999
+
+  Comparisons made : 105 -> 108 -> 110 -> (not found)
+  ! No patient record found for ID 999.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Delete a patient record
+---------------------------------------------------------------------------------
+  Patient ID : 103
+
+  Patient ID        : 103
+  Name              : Shanika De Silva
+  Age               : 56
+  Contact Number    : 0708901234
+  Medical Condition : Kidney stones
+  Recorded Visits   : 0
+
+  Delete this record permanently? (y/n) : y
+
+  > Patient 103 deleted from the BST.
+  > Treatment records already in the history are kept as an audit trail.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Delete a patient record
+---------------------------------------------------------------------------------
+  Patient ID : 102
+
+  Patient ID        : 102
+  Name              : Kamala Silva
+  Age               : 32
+  Contact Number    : 0712345678
+  Medical Condition : Fractured arm
+  Recorded Visits   : 0
+
+  Delete this record permanently? (y/n) : y
+
+  > Patient 102 deleted from the BST.
+  > Treatment records already in the history are kept as an audit trail.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  All patient records in ascending order of Patient ID:
+
++--------+----------------------+------+----------------+------------------------+
+| ID     | NAME                 | AGE  | CONTACT        | MEDICAL CONDITION      |
++--------+----------------------+------+----------------+------------------------+
+| 101    | Anusha Jayasinghe    | 28   | 0754567890     | Severe migraine        |
+| 104    | Ravi Bandara         | 51   | 0785678901     | Diabetes               |
+| 105    | Nimal Perera         | 45   | 0771234567     | Chest pain             |
+| 106    | Tharindu Silva       | 34   | 0759988776     | Dengue fever           |
+| 107    | Malini Gunawardena   | 39   | 0776789012     | Asthma attack          |
+| 108    | Sunil Fernando       | 67   | 0763456789     | High blood pressure    |
+| 110    | Dinesh Rathnayake    | 23   | 0727890123     | Road accident injury   |
++--------+----------------------+------+----------------+------------------------+
+  Total patients: 7
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+  Tree drawn on its side, the root is on the left:
+
+          [110] Dinesh Rathnayake
+     [108] Sunil Fernando
+          [107] Malini Gunawardena
+               [106] Tharindu Silva
+[105] Nimal Perera
+     [104] Ravi Bandara
+          [101] Anusha Jayasinghe
+
+  Nodes: 7   Height: 3
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+=================================================================================
+  Thank you for using the Mini Hospital Emergency Management System.
+=================================================================================

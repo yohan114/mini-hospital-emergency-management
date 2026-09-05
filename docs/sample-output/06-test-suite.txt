@@ -1,0 +1,149 @@
+=================================================================
+  DATA STRUCTURE TEST SUITE
+=================================================================
+
+-- Binary Search Tree - patient records ------------------------
+  [PASS] a new tree is empty
+  [PASS] an empty tree has size 0
+  [PASS] an empty tree has height -1
+  [PASS] search on an empty tree returns null
+  [PASS] all 8 patients were inserted
+  [PASS] the tree is no longer empty
+  [PASS] the height of the sample tree is 3
+  [PASS] a duplicate ID is rejected
+  [PASS] the size did not change after the duplicate
+  [PASS] a null patient is rejected
+  [PASS] search finds the root
+  [PASS] search finds a leaf
+  [PASS] search returns the right record
+  [PASS] search returns null for a missing ID
+  [PASS] contains is true for an existing ID
+  [PASS] contains is false for a missing ID
+  [PASS] the search path follows the BST rule
+  [PASS] findMin returns the smallest ID
+  [PASS] findMax returns the largest ID
+  [PASS] in-order traversal is sorted
+  [PASS] deleting a leaf succeeds
+  [PASS] the size dropped by one
+  [PASS] the deleted leaf can no longer be found
+  [PASS] the order is still correct
+  [PASS] deleting a node with one child succeeds
+  [PASS] the parent now points at the surviving child
+  [PASS] the order survives a one-child deletion
+  [PASS] deleting a node with two children succeeds
+  [PASS] the deleted root is gone
+  [PASS] the in-order successor took its place
+  [PASS] the size is correct after three deletions
+  [PASS] deleting a missing ID returns false
+  [PASS] a failed delete does not change the size
+  [PASS] toSortedArray returns every patient
+
+-- Queue - emergency unit (FIFO) -------------------------------
+  [PASS] a new queue is empty
+  [PASS] an empty queue has size 0
+  [PASS] dequeue on an empty queue throws
+  [PASS] peek on an empty queue throws
+  [PASS] three patients are waiting
+  [PASS] the queue is not empty
+  [PASS] peek shows the first patient who arrived
+  [PASS] peek does not remove anybody
+  [PASS] the first dequeue returns the first arrival
+  [PASS] the second dequeue returns the second arrival
+  [PASS] one patient is left
+  [PASS] containsPatient finds a waiting patient
+  [PASS] containsPatient is false for a treated patient
+  [PASS] the last dequeue returns the last arrival
+  [PASS] the queue is empty again
+  [PASS] dequeue throws once the queue is drained
+  [PASS] the queue can be reused after being emptied
+  [PASS] the size is correct after reuse
+  [PASS] removing the middle patient works
+  [PASS] the size dropped after the removal
+  [PASS] removing the front patient works
+  [PASS] the front moved on
+  [PASS] removing the rear patient works
+  [PASS] the queue is empty after removing everybody
+  [PASS] removing a patient who is not waiting returns null
+  [PASS] the rear reference was reset by removeByPatientId
+  [PASS] only one patient is waiting
+
+-- Stack - treatment history (LIFO) ----------------------------
+  [PASS] a new stack is empty
+  [PASS] an empty stack has size 0
+  [PASS] pop on an empty stack throws
+  [PASS] peek on an empty stack throws
+  [PASS] three records were pushed
+  [PASS] peek shows the newest record
+  [PASS] peek does not remove anything
+  [PASS] pop returns the newest record
+  [PASS] the next pop returns the one below it
+  [PASS] one record is left
+  [PASS] countForPatient counts only that patient
+  [PASS] countForPatient is 0 for an unknown patient
+  [PASS] the last pop returns the oldest record
+  [PASS] the stack is empty again
+  [PASS] pop throws once the stack is drained
+  [PASS] toArray has one entry per record
+  [PASS] toArray starts at the top of the stack
+  [PASS] toArray ends at the bottom of the stack
+
+-- Singly Linked List - patient visit history ------------------
+  [PASS] a new list is empty
+  [PASS] an empty list has size 0
+  [PASS] searching an empty list returns null
+  [PASS] removing from an empty list returns null
+  [PASS] the latest visit of an empty list is null
+  [PASS] the first visit is added
+  [PASS] the second visit is added
+  [PASS] the third visit is added
+  [PASS] all three visits are stored
+  [PASS] visits stay in the order they were added
+  [PASS] the latest visit is the last one added
+  [PASS] a duplicate Visit ID is rejected
+  [PASS] the size did not change after the duplicate
+  [PASS] search finds an existing visit
+  [PASS] search is not case sensitive
+  [PASS] search returns null for a missing visit
+  [PASS] addVisitFirst puts an older visit in front
+  [PASS] the new visit is at the head
+  [PASS] removing a middle node returns it
+  [PASS] the neighbours are relinked
+  [PASS] removing the head returns it
+  [PASS] the head moved on
+  [PASS] removing the tail returns it
+  [PASS] only the first visit is left
+  [PASS] removing a missing visit returns null
+  [PASS] the size is correct after the removals
+  [PASS] a visit can still be appended after a tail removal
+  [PASS] the latest visit is the newly appended one
+  [PASS] the list is empty after removing everything
+  [PASS] the latest visit is null again
+
+-- Integration - the four structures working together ----------
+  [PASS] a patient can be registered
+  [PASS] a duplicate registration is rejected
+  [PASS] the registered patient can be found
+  [PASS] a new patient has no visits
+  [PASS] the patient is waiting in the queue
+  [PASS] one patient is in the queue
+  [PASS] the queue is empty after the treatment
+  [PASS] the treatment was pushed onto the stack
+  [PASS] a visit was added to the linked list
+  [PASS] the record points at the visit it created
+  [PASS] undo pops the record that was pushed
+  [PASS] the stack is empty after the undo
+  [PASS] the linked visit was removed as well
+  [PASS] the patient is waiting again
+  [PASS] the patient record is deleted
+  [PASS] the deleted patient left the queue too
+  [PASS] the patient can no longer be found
+  [PASS] deleting a missing patient returns false
+  [PASS] the sample data registers 8 patients
+  [PASS] the sample data queues 3 patients
+  [PASS] the sample data pushes 2 treatment records
+  [PASS] the sample data adds 5 visits
+  [PASS] loading the sample data twice does not duplicate it
+
+=================================================================
+  RESULT: 132 passed, 0 failed, 132 checks in total
+=================================================================

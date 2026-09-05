@@ -445,7 +445,7 @@ public class Main {
         try {
             top = hospital.viewLastTreatment();
         } catch (EmptyStructureException ex) {
-            System.out.println("  ! " + ex.getMessage());
+            System.out.println("  ! The treatment history is empty - there is nothing to remove.");
             return;
         }
 

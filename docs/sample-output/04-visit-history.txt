@@ -1,0 +1,269 @@
+=================================================================================
+        MINI HOSPITAL EMERGENCY MANAGEMENT SYSTEM
+        CIT300 - Data Structures and Algorithms
+=================================================================================
+   Patient records ......... Binary Search Tree
+   Emergency unit .......... Queue  (First In, First Out)
+   Treatment history ....... Stack  (Last In, First Out)
+   Patient visit history ... Singly Linked List
+=================================================================================
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+=================================================================================
+  LOAD SAMPLE DATA
+=================================================================================
+  > Sample hospital data loaded:
+      8 patient records inserted into the BST
+      5 past visits added to three linked lists
+      2 completed treatments pushed onto the stack
+      3 patients waiting in the emergency queue
+
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         8 patient(s)
+  Queue (FIFO)         Emergency unit          3 waiting
+  Stack (LIFO)         Treatment history       2 record(s)
+  Singly Linked List   Patient visit history   5 visit(s) in total
+
+  Lowest  Patient ID : 101 (Anusha Jayasinghe)
+  Highest Patient ID : 110 (Dinesh Rathnayake)
+  BST height         : 3  (a search compares at most 4 record(s))
+  Next to be treated : Nimal Perera (EC-001)
+  Last treatment     : TR-002 - Shanika De Silva
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+
+  Visit history of Anusha Jayasinghe (ID 101), oldest visit first:
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-001    | 2026-03-12 | Dr. Wijesinghe     | Migraine               | Pain relief            |
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 2
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a visit to a patient's history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+  Visit Date (yyyy-mm-dd) : 2026-09-01
+  Doctor Name             : Dr. Wijesinghe
+  Diagnosis               : Chronic migraine
+  Treatment               : MRI scan requested
+
+  > Visit V-006 appended to the end of the list for Anusha Jayasinghe.
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-001    | 2026-03-12 | Dr. Wijesinghe     | Migraine               | Pain relief            |
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-01 | Dr. Wijesinghe     | Chronic migraine       | MRI scan requested     |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 3
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Search for a visit
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+  Visit ID : V-002
+
+  Visit found:
+    Visit ID   : V-002
+    Date       : 2026-06-02
+    Doctor     : Dr. Wijesinghe
+    Diagnosis  : Migraine follow up
+    Treatment  : Medication review
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Search for a visit
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+  Visit ID : V-999
+
+  ! Visit V-999 was not found for Anusha Jayasinghe.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Remove a visit from a patient's history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-001    | 2026-03-12 | Dr. Wijesinghe     | Migraine               | Pain relief            |
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-01 | Dr. Wijesinghe     | Chronic migraine       | MRI scan requested     |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 3
+
+  Visit ID to remove : V-001
+
+  > Visit V-001 (Migraine) removed. The previous node now points past it.
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-01 | Dr. Wijesinghe     | Chronic migraine       | MRI scan requested     |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 2
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+
+  Visit history of Anusha Jayasinghe (ID 101), oldest visit first:
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-01 | Dr. Wijesinghe     | Chronic migraine       | MRI scan requested     |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 2
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 110
+  Patient    : Dinesh Rathnayake (Road accident injury)
+
+  Visit history of Dinesh Rathnayake (ID 110), oldest visit first:
+
+  No visits recorded for this patient yet.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+=================================================================================
+  Thank you for using the Mini Hospital Emergency Management System.
+=================================================================================

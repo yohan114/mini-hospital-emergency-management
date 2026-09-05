@@ -1,0 +1,295 @@
+=================================================================================
+        MINI HOSPITAL EMERGENCY MANAGEMENT SYSTEM
+        CIT300 - Data Structures and Algorithms
+=================================================================================
+   Patient records ......... Binary Search Tree
+   Emergency unit .......... Queue  (First In, First Out)
+   Treatment history ....... Stack  (Last In, First Out)
+   Patient visit history ... Singly Linked List
+=================================================================================
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+=================================================================================
+  LOAD SAMPLE DATA
+=================================================================================
+  > Sample hospital data loaded:
+      8 patient records inserted into the BST
+      5 past visits added to three linked lists
+      2 completed treatments pushed onto the stack
+      3 patients waiting in the emergency queue
+
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         8 patient(s)
+  Queue (FIFO)         Emergency unit          3 waiting
+  Stack (LIFO)         Treatment history       2 record(s)
+  Singly Linked List   Patient visit history   5 visit(s) in total
+
+  Lowest  Patient ID : 101 (Anusha Jayasinghe)
+  Highest Patient ID : 110 (Dinesh Rathnayake)
+  BST height         : 3  (a search compares at most 4 record(s))
+  Next to be treated : Nimal Perera (EC-001)
+  Last treatment     : TR-002 - Shanika De Silva
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| LVL | REC ID  | PT ID  | PATIENT NAME         | DOCTOR             | TREATMENT GIVEN        | COMPLETED AT        |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| 1   | TR-002  | 103    | Shanika De Silva     | Dr. Mendis         | Ultrasound scan        | 2026-09-05 20:30:49 |
+| 2   | TR-001  | 102    | Kamala Silva         | Dr. Fonseka        | Arm cast applied       | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+  Records in history: 2   Most recent: TR-002
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-002
+  Patient         : Shanika De Silva (ID 103)
+  Doctor          : Dr. Mendis
+  Treatment Given : Ultrasound scan
+  Completed At    : 2026-09-05 20:30:49
+  Linked Visit    : -
+
+  The record stays on the stack - peek only reads the top.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Add a treatment record directly
+---------------------------------------------------------------------------------
+  Patient ID : 105
+  Patient    : Nimal Perera (Chest pain)
+  Doctor Name     : Dr. Silva
+  Treatment Given : Cardiac monitoring
+
+  > TR-003 pushed onto the treatment history stack.
+    It is now the top of the stack, so it will be the first record popped.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| LVL | REC ID  | PT ID  | PATIENT NAME         | DOCTOR             | TREATMENT GIVEN        | COMPLETED AT        |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| 1   | TR-003  | 105    | Nimal Perera         | Dr. Silva          | Cardiac monitoring     | 2026-09-05 20:30:49 |
+| 2   | TR-002  | 103    | Shanika De Silva     | Dr. Mendis         | Ultrasound scan        | 2026-09-05 20:30:49 |
+| 3   | TR-001  | 102    | Kamala Silva         | Dr. Fonseka        | Arm cast applied       | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+  Records in history: 3   Most recent: TR-003
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-003
+  Patient         : Nimal Perera (ID 105)
+  Doctor          : Dr. Silva
+  Treatment Given : Cardiac monitoring
+  Completed At    : 2026-09-05 20:30:49
+  Linked Visit    : -
+
+  Remove this record? (y/n) : y
+
+  > TR-003 popped from the treatment history.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| LVL | REC ID  | PT ID  | PATIENT NAME         | DOCTOR             | TREATMENT GIVEN        | COMPLETED AT        |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| 1   | TR-002  | 103    | Shanika De Silva     | Dr. Mendis         | Ultrasound scan        | 2026-09-05 20:30:49 |
+| 2   | TR-001  | 102    | Kamala Silva         | Dr. Fonseka        | Arm cast applied       | 2026-09-05 20:30:49 |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+  Records in history: 2   Most recent: TR-002
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-002
+  Patient         : Shanika De Silva (ID 103)
+  Doctor          : Dr. Mendis
+  Treatment Given : Ultrasound scan
+  Completed At    : 2026-09-05 20:30:49
+  Linked Visit    : -
+
+  Remove this record? (y/n) : y
+
+  > TR-002 popped from the treatment history.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-001
+  Patient         : Kamala Silva (ID 102)
+  Doctor          : Dr. Fonseka
+  Treatment Given : Arm cast applied
+  Completed At    : 2026-09-05 20:30:49
+  Linked Visit    : -
+
+  Remove this record? (y/n) : y
+
+  > TR-001 popped from the treatment history.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  ! The treatment history is empty - there is nothing to remove.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Most recent treatment record
+---------------------------------------------------------------------------------
+  ! The treatment history is empty - there is nothing to show.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+=================================================================================
+  Thank you for using the Mini Hospital Emergency Management System.
+=================================================================================
