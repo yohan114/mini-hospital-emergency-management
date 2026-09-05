@@ -1,0 +1,26 @@
+# Compiled Java class files
+*.class
+
+# Build output
+out/
+bin/
+build/
+
+# IDE settings
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Assignment brief (not part of the deliverable source)
+CIT300_Mid_Assignment*.pdf
