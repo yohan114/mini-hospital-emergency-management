@@ -1,5 +1,7 @@
 package hospital.model;
 
+import hospital.datastructures.VisitLinkedList;
+
 /**
  * A single patient record held by the hospital system.
  *
@@ -19,12 +21,19 @@ public class Patient {
     private String contactNumber;
     private String medicalCondition;
 
+    /** Every patient owns one singly linked list holding their previous visits. */
+    private final VisitLinkedList visitHistory = new VisitLinkedList();
+
     public Patient(int patientId, String name, int age, String contactNumber, String medicalCondition) {
         this.patientId = patientId;
         this.name = name;
         this.age = age;
         this.contactNumber = contactNumber;
         this.medicalCondition = medicalCondition;
+    }
+
+    public VisitLinkedList getVisitHistory() {
+        return visitHistory;
     }
 
     public int getPatientId() {
@@ -83,7 +92,8 @@ public class Patient {
                 + "  Name              : " + name + System.lineSeparator()
                 + "  Age               : " + age + System.lineSeparator()
                 + "  Contact Number    : " + contactNumber + System.lineSeparator()
-                + "  Medical Condition : " + medicalCondition;
+                + "  Medical Condition : " + medicalCondition + System.lineSeparator()
+                + "  Recorded Visits   : " + visitHistory.size();
     }
 
     /** Keeps table columns aligned when a value is longer than its column. */
