@@ -103,7 +103,8 @@ the emergency queue, so every operation can be demonstrated immediately.
 │   ├── demo-scripts/                      Input files that produce those transcripts
 │   ├── video-script.md                    Guide and narration for the demo video
 │   ├── record-demo.sh                     Plays a demo script at a paced speed
-│   ├── make-screenshots.py                Renders the transcripts into the screenshots
+│   ├── capture-real-screenshots.sh        Takes the screenshots from a real console
+│   ├── capture-window.ps1                 Photographs a single window
 │   └── build-submission.py                Builds the LMS submission package
 ├── run.bat / run.sh                       Build and run
 ├── run-tests.bat / run-tests.sh           Build and run the tests

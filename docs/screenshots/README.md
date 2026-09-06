@@ -4,16 +4,19 @@ All 31 screenshots of the Mini Hospital Emergency Management System, grouped by 
 structure they demonstrate. Four of them also appear on the
 [main README](../../README.md#screenshots).
 
-The text in every image is the real, unedited output of the program. Each one was produced
-by feeding an input file from [`../demo-scripts`](../demo-scripts) into the menu and
-rendering the resulting transcript, which is kept in full in
-[`../sample-output`](../sample-output):
+Every image is a genuine screen capture of the program running in a Windows console
+window - not a picture generated from the text. Each one was taken by opening a real
+console, running the system with a short sequence of menu choices, and photographing that
+window:
 
 ```
-java -cp out hospital.app.Main --echo < docs/demo-scripts/01-bst-operations.txt
+./docs/capture-real-screenshots.sh
 ```
 
-The rendering step is [`../make-screenshots.py`](../make-screenshots.py).
+The capture step is [`../capture-real-screenshots.sh`](../capture-real-screenshots.sh),
+which uses [`../capture-window.ps1`](../capture-window.ps1) to photograph the console
+window on its own. The full text transcripts of longer runs are kept separately in
+[`../sample-output`](../sample-output).
 
 ---
 
