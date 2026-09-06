@@ -29,6 +29,8 @@ used anywhere in the system - only plain nodes and references.
 | Course       | CIT300 - Data Structures and Algorithms   |
 | Assignment   | Individual Mid Assignment                 |
 | Language     | Java (compiles on JDK 8 and newer, developed on JDK 21) |
+| Repository   | <https://github.com/yohan114/mini-hospital-emergency-management> |
+| Demonstration video | _add the link before submitting_   |
 
 ---
 
