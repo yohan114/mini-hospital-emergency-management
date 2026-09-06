@@ -1,0 +1,1491 @@
+=================================================================================
+        MINI HOSPITAL EMERGENCY MANAGEMENT SYSTEM
+        CIT300 - Data Structures and Algorithms
+=================================================================================
+   Patient records ......... Binary Search Tree
+   Emergency unit .......... Queue  (First In, First Out)
+   Treatment history ....... Stack  (Last In, First Out)
+   Patient visit history ... Singly Linked List
+=================================================================================
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: abc
+  ! 'abc' is not a valid number. Please try again.
+  Enter your choice: 9
+  ! Please enter a number between 0 and 6.
+  Enter your choice: 5
+
+=================================================================================
+  SYSTEM SUMMARY
+=================================================================================
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         0 patient(s)
+  Queue (FIFO)         Emergency unit          0 waiting
+  Stack (LIFO)         Treatment history       0 record(s)
+  Singly Linked List   Patient visit history   0 visit(s) in total
+
+  No patient records yet - register a patient or load the sample data.
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  All patient records in ascending order of Patient ID:
+
+  No patient records found. The tree is empty.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+  Tree drawn on its side, the root is on the left:
+
+  The tree is empty.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Search for a patient
+---------------------------------------------------------------------------------
+  Patient ID : 101
+
+  Comparisons made : (tree is empty)
+  ! No patient record found for ID 101.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Delete a patient record
+---------------------------------------------------------------------------------
+  Patient ID : 101
+
+  ! No patient record found for ID 101.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
+  The emergency queue is empty - no patients are waiting.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Next patient to be treated
+---------------------------------------------------------------------------------
+  ! The emergency queue is empty - nobody is waiting.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Treat the next patient
+---------------------------------------------------------------------------------
+  ! The emergency queue is empty - nobody is waiting.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a patient to the emergency queue
+---------------------------------------------------------------------------------
+  Patient ID : 101
+
+  ! No patient record found for ID 101.
+    Register the patient first from the Patient Records menu.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
+  The treatment history is empty - no treatment has been completed yet.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Most recent treatment record
+---------------------------------------------------------------------------------
+  ! The treatment history is empty - there is nothing to show.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  ! The treatment history is empty - there is nothing to remove.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+
+  ! No patient record found for ID 101.
+    Register the patient first from the Patient Records menu.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+=================================================================================
+  LOAD SAMPLE DATA
+=================================================================================
+  > Sample hospital data loaded:
+      8 patient records inserted into the BST
+      5 past visits added to three linked lists
+      2 completed treatments pushed onto the stack
+      3 patients waiting in the emergency queue
+
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         8 patient(s)
+  Queue (FIFO)         Emergency unit          3 waiting
+  Stack (LIFO)         Treatment history       2 record(s)
+  Singly Linked List   Patient visit history   5 visit(s) in total
+
+  Lowest  Patient ID : 101 (Anusha Jayasinghe)
+  Highest Patient ID : 110 (Dinesh Rathnayake)
+  BST height         : 3  (a search compares at most 4 record(s))
+  Next to be treated : Nimal Perera (EC-001)
+  Last treatment     : TR-002 - Shanika De Silva
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+=================================================================================
+  LOAD SAMPLE DATA
+=================================================================================
+  ! The sample data has already been loaded.
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Register a new patient
+---------------------------------------------------------------------------------
+  Patient ID (number) : abc
+  ! 'abc' is not a valid number. Please try again.
+  Patient ID (number) : 0
+  ! Please enter a number between 1 and 999999.
+  Patient ID (number) : 1000000
+  ! Please enter a number between 1 and 999999.
+  Patient ID (number) : 106
+  Patient Name        : 
+  ! This value cannot be empty. Please try again.
+  Patient Name        : Tharindu Silva
+  Age                 : abc
+  ! 'abc' is not a valid number. Please try again.
+  Age                 : 200
+  ! Please enter a number between 0 and 130.
+  Age                 : 34
+  Contact Number      : 0759988776
+  Medical Condition   : Dengue fever
+
+  > Patient registered and inserted into the BST.
+    Insert path : 105 -> 108 -> 107 -> 106
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Register a new patient
+---------------------------------------------------------------------------------
+  Patient ID (number) : 105
+
+  ! Patient ID 105 is already used. IDs must be unique,
+    so the BST rejected this insert.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+  Update patient details
+---------------------------------------------------------------------------------
+  Patient ID : 106
+  Patient    : Tharindu Silva (Dengue fever)
+
+  Patient ID        : 106
+  Name              : Tharindu Silva
+  Age               : 34
+  Contact Number    : 0759988776
+  Medical Condition : Dengue fever
+  Recorded Visits   : 0
+
+  Press Enter to keep the current value.
+  Name              : 
+  Age               : 35
+  Contact Number    : 
+  Medical Condition : Dengue fever - recovering
+
+  > Record updated. The Patient ID is never changed, because it is the BST key.
+  Patient ID        : 106
+  Name              : Tharindu Silva
+  Age               : 35
+  Contact Number    : 0759988776
+  Medical Condition : Dengue fever - recovering
+  Recorded Visits   : 0
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 6
+
+  Update patient details
+---------------------------------------------------------------------------------
+  Patient ID : 999
+
+  ! No patient record found for ID 999.
+    Register the patient first from the Patient Records menu.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Delete a patient record
+---------------------------------------------------------------------------------
+  Patient ID : 106
+
+  Patient ID        : 106
+  Name              : Tharindu Silva
+  Age               : 35
+  Contact Number    : 0759988776
+  Medical Condition : Dengue fever - recovering
+  Recorded Visits   : 0
+
+  Delete this record permanently? (y/n) : maybe
+  ! Please answer with y or n.
+  Delete this record permanently? (y/n) : n
+  > Deletion cancelled.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Search for a patient
+---------------------------------------------------------------------------------
+  Patient ID : 106
+
+  Comparisons made : 105 -> 108 -> 107 -> 106
+
+  Patient found:
+  Patient ID        : 106
+  Name              : Tharindu Silva
+  Age               : 35
+  Contact Number    : 0759988776
+  Medical Condition : Dengue fever - recovering
+  Recorded Visits   : 0
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Delete a patient record
+---------------------------------------------------------------------------------
+  Patient ID : 110
+
+  Patient ID        : 110
+  Name              : Dinesh Rathnayake
+  Age               : 23
+  Contact Number    : 0727890123
+  Medical Condition : Road accident injury
+  Recorded Visits   : 0
+
+  ! This patient is waiting in the emergency queue and will be removed from it too.
+  Delete this record permanently? (y/n) : y
+
+  > Patient 110 deleted from the BST.
+  > The patient was also removed from the emergency queue.
+  > Treatment records already in the history are kept as an audit trail.
+
+=================================================================================
+  PATIENT RECORDS  (Binary Search Tree)
+=================================================================================
+  1. Register a new patient        (BST insert)
+  2. Search for a patient by ID    (BST search)
+  3. Delete a patient record       (BST delete)
+  4. Display all patients          (in-order traversal)
+  5. Display the tree structure
+  6. Update patient details
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-06 14:14:01 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 2   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a patient to the emergency queue
+---------------------------------------------------------------------------------
+  Patient ID : 106
+  Patient    : Tharindu Silva (Dengue fever - recovering)
+  Reason for emergency : Fever and chills
+
+  > EC-004 added to the rear of the queue.
+    Patient : Tharindu Silva (ID 106)
+    Arrived : 2026-09-06 14:14:01
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-06 14:14:01 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-06 14:14:01 |
+| 3   | EC-004  | 106    | Tharindu Silva       | Fever and chills       | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 3   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a patient to the emergency queue
+---------------------------------------------------------------------------------
+  Patient ID : 106
+  Patient    : Tharindu Silva (Dengue fever - recovering)
+
+  ! Tharindu Silva is already waiting in the queue.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-06 14:14:01 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-06 14:14:01 |
+| 3   | EC-004  | 106    | Tharindu Silva       | Fever and chills       | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 3   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+  Remove a waiting patient from the queue
+---------------------------------------------------------------------------------
+  Patient ID : 101
+
+  ! Patient 101 is not in the emergency queue.
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+  Remove a waiting patient from the queue
+---------------------------------------------------------------------------------
+  Patient ID : 106
+
+  > EC-004 (Tharindu Silva) was removed from the queue without treatment.
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-06 14:14:01 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 2   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Patients currently waiting, front of the queue first:
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-001  | 105    | Nimal Perera         | Severe chest pain      | 2026-09-06 14:14:01 |
+| 2   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 2   Next to be treated: Nimal Perera
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Add a treatment record directly
+---------------------------------------------------------------------------------
+  Patient ID : 999
+
+  ! No patient record found for ID 999.
+    Register the patient first from the Patient Records menu.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Add a treatment record directly
+---------------------------------------------------------------------------------
+  Patient ID : 105
+  Patient    : Nimal Perera (Chest pain)
+  Doctor Name     : Dr. Test
+  Treatment Given : Observation only
+
+  > TR-003 pushed onto the treatment history stack.
+    It is now the top of the stack, so it will be the first record popped.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| LVL | REC ID  | PT ID  | PATIENT NAME         | DOCTOR             | TREATMENT GIVEN        | COMPLETED AT        |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| 1   | TR-003  | 105    | Nimal Perera         | Dr. Test           | Observation only       | 2026-09-06 14:14:01 |
+| 2   | TR-002  | 103    | Shanika De Silva     | Dr. Mendis         | Ultrasound scan        | 2026-09-06 14:14:01 |
+| 3   | TR-001  | 102    | Kamala Silva         | Dr. Fonseka        | Arm cast applied       | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+  Records in history: 3   Most recent: TR-003
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-003
+  Patient         : Nimal Perera (ID 105)
+  Doctor          : Dr. Test
+  Treatment Given : Observation only
+  Completed At    : 2026-09-06 14:14:01
+  Linked Visit    : -
+
+  Remove this record? (y/n) : n
+  > Cancelled, the stack was not changed.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| LVL | REC ID  | PT ID  | PATIENT NAME         | DOCTOR             | TREATMENT GIVEN        | COMPLETED AT        |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| 1   | TR-003  | 105    | Nimal Perera         | Dr. Test           | Observation only       | 2026-09-06 14:14:01 |
+| 2   | TR-002  | 103    | Shanika De Silva     | Dr. Mendis         | Ultrasound scan        | 2026-09-06 14:14:01 |
+| 3   | TR-001  | 102    | Kamala Silva         | Dr. Fonseka        | Arm cast applied       | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+  Records in history: 3   Most recent: TR-003
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-003
+  Patient         : Nimal Perera (ID 105)
+  Doctor          : Dr. Test
+  Treatment Given : Observation only
+  Completed At    : 2026-09-06 14:14:01
+  Linked Visit    : -
+
+  Remove this record? (y/n) : y
+
+  > TR-003 popped from the treatment history.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a visit to a patient's history
+---------------------------------------------------------------------------------
+  Patient ID : 999
+
+  ! No patient record found for ID 999.
+    Register the patient first from the Patient Records menu.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Remove a visit from a patient's history
+---------------------------------------------------------------------------------
+  Patient ID : 105
+  Patient    : Nimal Perera (Chest pain)
+
+  ! Nimal Perera has no recorded visits.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Search for a visit
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+  Visit ID : V-001
+
+  Visit found:
+    Visit ID   : V-001
+    Date       : 2026-03-12
+    Doctor     : Dr. Wijesinghe
+    Diagnosis  : Migraine
+    Treatment  : Pain relief
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Search for a visit
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+  Visit ID : V-999
+
+  ! Visit V-999 was not found for Anusha Jayasinghe.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Add a visit to a patient's history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+  Visit Date (yyyy-mm-dd) : 2026-09-10
+  Doctor Name             : Dr. Test
+  Diagnosis               : Follow up review
+  Treatment               : Medication adjusted
+
+  > Visit V-006 appended to the end of the list for Anusha Jayasinghe.
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-001    | 2026-03-12 | Dr. Wijesinghe     | Migraine               | Pain relief            |
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-10 | Dr. Test           | Follow up review       | Medication adjusted    |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 3
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+
+  Visit history of Anusha Jayasinghe (ID 101), oldest visit first:
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-001    | 2026-03-12 | Dr. Wijesinghe     | Migraine               | Pain relief            |
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-10 | Dr. Test           | Follow up review       | Medication adjusted    |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 3
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Remove a visit from a patient's history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-001    | 2026-03-12 | Dr. Wijesinghe     | Migraine               | Pain relief            |
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-10 | Dr. Test           | Follow up review       | Medication adjusted    |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 3
+
+  Visit ID to remove : V-001
+
+  > Visit V-001 (Migraine) removed. The previous node now points past it.
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-10 | Dr. Test           | Follow up review       | Medication adjusted    |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 2
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 101
+  Patient    : Anusha Jayasinghe (Severe migraine)
+
+  Visit history of Anusha Jayasinghe (ID 101), oldest visit first:
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-002    | 2026-06-02 | Dr. Wijesinghe     | Migraine follow up     | Medication review      |
+| V-006    | 2026-09-10 | Dr. Test           | Follow up review       | Medication adjusted    |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 2
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 2
+
+  Treat the next patient
+---------------------------------------------------------------------------------
+  Front of the queue : EC-001 - Nimal Perera (Severe chest pain)
+
+  Doctor Name      : Dr. Silva
+  Diagnosis        : Acute chest pain
+  Treatment Given  : ECG and cardiac medication
+
+  > EC-001 removed from the front of the queue (dequeue).
+  > Visit V-007 added to the visit history of Nimal Perera (linked list).
+  > Record TR-004 pushed onto the treatment history (stack).
+
++-----+---------+--------+----------------------+------------------------+---------------------+
+| POS | CASE ID | PT ID  | PATIENT NAME         | REASON                 | ARRIVAL TIME        |
++-----+---------+--------+----------------------+------------------------+---------------------+
+| 1   | EC-003  | 107    | Malini Gunawardena   | Breathing difficulty   | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+------------------------+---------------------+
+  Patients waiting: 1   Next to be treated: Malini Gunawardena
+
+=================================================================================
+  EMERGENCY UNIT  (Queue - First In, First Out)
+=================================================================================
+  1. Add a patient to the queue    (enqueue)
+  2. Treat the next patient        (dequeue)
+  3. View the next patient         (peek)
+  4. Display the waiting queue
+  5. Remove a waiting patient      (patient left)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 105
+  Patient    : Nimal Perera (Chest pain)
+
+  Visit history of Nimal Perera (ID 105), oldest visit first:
+
++----------+------------+--------------------+------------------------+------------------------+
+| VISIT ID | DATE       | DOCTOR             | DIAGNOSIS              | TREATMENT              |
++----------+------------+--------------------+------------------------+------------------------+
+| V-007    | 2026-09-06 | Dr. Silva          | Acute chest pain       | ECG and cardiac med... |
++----------+------------+--------------------+------------------------+------------------------+
+  Total visits: 1
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 1
+
+  Completed treatments, newest first:
+
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| LVL | REC ID  | PT ID  | PATIENT NAME         | DOCTOR             | TREATMENT GIVEN        | COMPLETED AT        |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+| 1   | TR-004  | 105    | Nimal Perera         | Dr. Silva          | ECG and cardiac med... | 2026-09-06 14:14:01 |
+| 2   | TR-002  | 103    | Shanika De Silva     | Dr. Mendis         | Ultrasound scan        | 2026-09-06 14:14:01 |
+| 3   | TR-001  | 102    | Kamala Silva         | Dr. Fonseka        | Arm cast applied       | 2026-09-06 14:14:01 |
++-----+---------+--------+----------------------+--------------------+------------------------+---------------------+
+  Records in history: 3   Most recent: TR-004
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 3
+
+  Remove the most recent treatment record
+---------------------------------------------------------------------------------
+  Record ID       : TR-004
+  Patient         : Nimal Perera (ID 105)
+  Doctor          : Dr. Silva
+  Treatment Given : ECG and cardiac medication
+  Completed At    : 2026-09-06 14:14:01
+  Linked Visit    : V-007
+
+  ! Visit V-007 will also be removed from the patient's visit history.
+  Remove this record? (y/n) : y
+
+  > TR-004 popped from the treatment history.
+  > Visit V-007 removed from the linked list of Nimal Perera.
+
+=================================================================================
+  TREATMENT HISTORY  (Stack - Last In, First Out)
+=================================================================================
+  1. Display treatment records     (top of the stack first)
+  2. View the most recent record   (peek)
+  3. Remove the most recent record (pop)
+  4. Add a treatment record        (push)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 4
+
+  Display a patient's visit history
+---------------------------------------------------------------------------------
+  Patient ID : 105
+  Patient    : Nimal Perera (Chest pain)
+
+  Visit history of Nimal Perera (ID 105), oldest visit first:
+
+  No visits recorded for this patient yet.
+
+=================================================================================
+  PATIENT VISIT HISTORY  (Singly Linked List)
+=================================================================================
+  1. Add a visit to a patient      (insert at the end)
+  2. Remove a visit                (unlink a node)
+  3. Search for a visit            (linear search)
+  4. Display a patient's visits    (traverse the list)
+  0. Back to main menu
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 5
+
+=================================================================================
+  SYSTEM SUMMARY
+=================================================================================
+  Structure            Module                  Size
+  -------------------- ----------------------- --------------------
+  Binary Search Tree   Patient records         8 patient(s)
+  Queue (FIFO)         Emergency unit          1 waiting
+  Stack (LIFO)         Treatment history       2 record(s)
+  Singly Linked List   Patient visit history   5 visit(s) in total
+
+  Lowest  Patient ID : 101 (Anusha Jayasinghe)
+  Highest Patient ID : 108 (Sunil Fernando)
+  BST height         : 3  (a search compares at most 4 record(s))
+  Next to be treated : Malini Gunawardena (EC-003)
+  Last treatment     : TR-002 - Shanika De Silva
+
+---------------------------------------------------------------------------------
+  MAIN MENU
+---------------------------------------------------------------------------------
+  1. Patient Records          (Binary Search Tree)
+  2. Emergency Unit           (Queue - FIFO)
+  3. Treatment History        (Stack - LIFO)
+  4. Patient Visit History    (Singly Linked List)
+  5. System Summary
+  6. Load Sample Data
+  0. Exit
+---------------------------------------------------------------------------------
+  Enter your choice: 0
+
+=================================================================================
+  Thank you for using the Mini Hospital Emergency Management System.
+=================================================================================
