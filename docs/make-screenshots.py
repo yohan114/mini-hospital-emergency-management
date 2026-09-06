@@ -59,6 +59,15 @@ SHOTS = [
     ("21-integration-undo", "05-full-workflow.txt", 231, 252, "Undo a treatment (stack + list)"),
     ("22-system-summary", "05-full-workflow.txt", 318, 346, "System summary"),
     ("23-test-suite-result", "06-test-suite.txt", 118, 150, "Test suite result"),
+    # Feature sweep: the validation and error paths the other demos do not reach.
+    ("24-cold-start-empty-system", "07-all-features.txt", 18, 45, "Cold start - empty system"),
+    ("25-input-validation", "07-all-features.txt", 424, 452, "Input validation"),
+    ("26-duplicate-patient-id", "07-all-features.txt", 455, 470, "Duplicate Patient ID rejected"),
+    ("27-update-patient", "07-all-features.txt", 478, 510, "Update patient details"),
+    ("28-delete-declined", "07-all-features.txt", 538, 558, "Delete declined - record kept"),
+    ("29-delete-clears-queue", "07-all-features.txt", 618, 650, "Delete also clears the queue"),
+    ("30-duplicate-enqueue", "07-all-features.txt", 731, 745, "Duplicate enqueue blocked"),
+    ("31-pop-declined", "07-all-features.txt", 922, 942, "Pop declined - stack unchanged"),
 ]
 
 

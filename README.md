@@ -98,11 +98,13 @@ the emergency queue, so every operation can be demonstrated immediately.
 │       └── tests/
 │           └── DataStructureTests.java    132 checks, no external test library
 ├── docs/
-│   ├── screenshots/                       23 screenshots + a gallery README
+│   ├── screenshots/                       31 screenshots + a gallery README
 │   ├── sample-output/                     Full text transcripts of the demo runs
 │   ├── demo-scripts/                      Input files that produce those transcripts
-│   ├── video-script.md                    Plan for the demonstration video
-│   └── make-screenshots.py                Renders the transcripts into the screenshots
+│   ├── video-script.md                    Guide and narration for the demo video
+│   ├── record-demo.sh                     Plays a demo script at a paced speed
+│   ├── make-screenshots.py                Renders the transcripts into the screenshots
+│   └── build-submission.py                Builds the LMS submission package
 ├── run.bat / run.sh                       Build and run
 ├── run-tests.bat / run-tests.sh           Build and run the tests
 └── README.md
@@ -315,7 +317,7 @@ than an exception.
 
 ## Screenshots
 
-One screenshot per data structure is shown below. The full set of **23 screenshots**,
+One screenshot per data structure is shown below. The full set of **31 screenshots**,
 covering every operation including insert, delete, enqueue, dequeue, push, pop, search,
 removal, the empty structure messages and the test run, is in the gallery at
 **[`docs/screenshots`](docs/screenshots)**. The complete text transcripts they come from
@@ -339,10 +341,10 @@ the patient in place.
 
 ![Visit history](docs/screenshots/16-list-display-visits.png)
 
-> The remaining 19 screenshots - the tree drawing, BST insert/search/delete, enqueue and
+> The remaining 27 screenshots - the tree drawing, BST insert/search/delete, enqueue and
 > dequeue, push and pop, adding and removing visits, the empty queue and empty stack
-> handling, the full integration workflow and the test result - are all in the
-> [screenshot gallery](docs/screenshots).
+> handling, the full integration workflow, the test result, and the input validation and
+> error paths - are all in the [screenshot gallery](docs/screenshots).
 
 ---
 
