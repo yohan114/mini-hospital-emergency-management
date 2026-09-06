@@ -1,121 +1,193 @@
-# Demonstration video plan
+# Demonstration video - recording guide and narration
 
-The video itself has **not** been recorded yet. This file is the plan to follow when
-recording it, mapped to the eight points the assignment asks for.
+The video has **not** been recorded. It needs your face in the introduction and your voice
+on the narration, so it has to be you. Everything else is set up here so the recording
+itself is close to effortless.
 
-Target length: **5 - 10 minutes**. Record the screen with the webcam on for the
-introduction (the assignment requires the face to be visible there).
-
-Before recording:
-
-```
-run-tests.bat        make sure all 132 checks pass
-run.bat              make sure the program starts
-```
-
-Keep the project open in the editor, a terminal ready, and the GitHub repository page open
-in a browser.
+Target length: **5 - 10 minutes**.
 
 ---
 
-## 1. Introduction - about 30 seconds (face visible)
+## Before you press record
 
-Name, student ID, course (CIT300 - Data Structures and Algorithms), and the title of the
-assignment: Mini Hospital Emergency Management System.
+**1. Check everything still works**
 
-## 2. What the system does - about 45 seconds
+```
+run-tests.bat
+```
 
-Explain the flow in plain words: patients are registered, they arrive at the emergency
-unit and wait their turn, a doctor treats the next patient in line, and every completed
-treatment is stored both as a treatment record and as an entry in that patient's visit
-history. Mention that all four structures are written from scratch, without any
-`java.util` collection.
+You should see `132 passed, 0 failed`. Leave that result on screen, it is used later.
 
-## 3. GitHub repository and commit history - about 45 seconds
+**2. Set up OBS** (already installed at `C:\Program Files\obs-studio`)
 
-Show the repository page, the folder structure, and then the commit list. Scroll through
-the commits from the first one to the last and point out that the project was built in
-steps: models, then the BST, then the queue, the stack, the linked list, the service
-layer, the menu, the tests and the documentation.
+* Sources: **Display Capture** for the screen, **Video Capture Device** for the webcam,
+  **Audio Input Capture** for the microphone.
+* Put the webcam in a corner as a small box. It only has to be visible during the
+  introduction, but leaving it up the whole time is fine.
+* Settings -> Output -> Recording Quality: *High Quality*, format **mp4**.
+* Do a 20 second test recording first and play it back. Check that your voice is clear and
+  that the console text is readable - if it is not, increase the terminal font size
+  (Ctrl and + in Windows Terminal) rather than the recording resolution.
 
-## 4. How each data structure is used - about 90 seconds
+**3. Have these open and ready**
 
-Open the four classes in the editor and explain one thing about each:
+| Window                  | Showing                                                      |
+|-------------------------|--------------------------------------------------------------|
+| Browser                 | <https://github.com/yohan114/mini-hospital-emergency-management> |
+| Editor                  | The four data structure classes, in tabs                     |
+| Terminal 1              | In the project folder, ready to run the demo                 |
+| Terminal 2              | The test result from step 1                                  |
 
-| Structure          | Class             | The one point to make                                                      |
-|--------------------|-------------------|----------------------------------------------------------------------------|
-| Binary Search Tree | `PatientBST`      | Keyed on Patient ID, so search is O(log n) and the in-order traversal is already sorted |
-| Queue              | `EmergencyQueue`  | `front` and `rear` references, enqueue at the rear and dequeue at the front, so FIFO and both O(1) |
-| Stack              | `TreatmentStack`  | Only the `top` reference moves, so push and pop are O(1) and the newest record comes back first |
-| Singly Linked List | `VisitLinkedList` | One list per patient, each node has a single `next` link, appended at the tail |
+---
 
-## 5 and 6. The system running, with the key operations
+## Let the demo drive itself
 
-Start the program and use **option 6 (Load Sample Data)** first. The demo scripts in
-`docs/demo-scripts` follow exactly this order, so they can be used as a rehearsal.
+Instead of typing menu options live (slow, and easy to fumble on camera), play a demo
+script at talking pace and narrate over it:
 
-**BST - about 60 seconds**
+```bash
+./docs/record-demo.sh docs/demo-scripts/01-bst-operations.txt 2
+```
 
-* Menu 1 -> 4: all patients, in ascending order of Patient ID, produced by the in-order
-  traversal.
-* Menu 1 -> 5: the tree drawn on its side; point at the root and at the left and right
-  subtrees.
-* Menu 1 -> 1: register a new patient, and show the insert path that is printed.
-* Menu 1 -> 2: search for an existing ID, and point at the "Comparisons made" line - four
-  comparisons instead of eight.
-* Menu 1 -> 2: search for an ID that does not exist.
-* Menu 1 -> 3: delete a patient with two children (for example 102), then 1 -> 4 again to
-  show that the list is still in order.
+The second argument is the seconds between inputs. `2` is a good talking pace, `2.5` if you
+want more room.
 
-**Queue - about 60 seconds**
+**Timing budget at 2 seconds per step:**
 
-* Menu 2 -> 4: the waiting line, front first.
-* Menu 2 -> 3: peek - the patient stays in the queue.
-* Menu 2 -> 1: add a patient to the rear.
-* Menu 2 -> 2: treat the next patient, and read out the three lines the program prints -
-  the case leaves the queue, a visit is added to the linked list, a record is pushed onto
-  the stack.
-* Drain the queue and try to treat again, to show the empty queue message.
+| Script                     | Shows                                    | Runtime |
+|----------------------------|------------------------------------------|---------|
+| `01-bst-operations.txt`    | BST insert, search, delete, traversal    | ~55s    |
+| `02-emergency-queue.txt`   | Queue enqueue, dequeue, peek, empty      | ~59s    |
+| `03-treatment-stack.txt`   | Stack push, pop, peek, empty             | ~45s    |
+| `04-visit-history.txt`     | Linked list add, search, remove          | ~55s    |
+| `05-full-workflow.txt`     | All four together, and undo              | ~69s    |
 
-**Stack - about 45 seconds**
+Running **01 to 04 covers every operation in about 3.6 minutes**, which leaves roughly
+5 minutes for the talking sections - a total near 9 minutes. Script 05 is optional; the
+dequeue step in script 02 already shows all three structures updating at once, so only add
+05 if you are running short.
 
-* Menu 3 -> 1: the history, newest record first.
-* Menu 3 -> 4: push a record, then display again to show it on top.
-* Menu 3 -> 3: pop, and mention that the linked visit is removed with it.
-* Pop until it is empty, then pop again to show the empty stack message.
+---
 
-**Linked list - about 45 seconds**
+## Section by section
 
-* Menu 4 -> 4 for patient 101: the visit history.
-* Menu 4 -> 1: add a visit, appended at the end.
-* Menu 4 -> 3: search for a Visit ID, then for one that does not exist.
-* Menu 4 -> 2: remove a visit, then display again.
+The narration lines below are talking points, not a teleprompter. Say them in your own
+words - and if there is a point you could not defend if the marker paused the video and
+asked about it, cut that line rather than reading it.
 
-**Tests - about 20 seconds**
+### 1. Introduction - 30 seconds (webcam on you)
 
-Run `run-tests.bat` and show the final line: 132 passed, 0 failed.
+> "Hi, I'm Yohan Udara, student ID 2296. This is my mid assignment for CIT300, Data
+> Structures and Algorithms - a Mini Hospital Emergency Management System written in Java."
 
-## 7. Implementation and design decisions - about 60 seconds
+### 2. What the system does - 45 seconds
 
-Pick three or four of these (they are all in the README under *Design decisions*):
+> "The system follows the flow of a small hospital. Patients are registered, they arrive at
+> the emergency unit and wait their turn, a doctor treats whoever is at the front of the
+> line, and each completed treatment is stored twice - as a treatment record, and as a
+> visit in that patient's history.
+>
+> Each of those four jobs uses a different data structure, and all four are written from
+> scratch - there is no ArrayList, LinkedList, Stack or TreeMap anywhere in the project,
+> only nodes and references."
 
-* The Patient ID is `final` because it is the BST key; changing it would break the search.
-* `dequeue`, `pop` and `peek` throw `EmptyStructureException` instead of returning `null`,
-  so the empty case cannot be ignored; the menu catches it and prints a message.
-* The queue keeps a `rear` reference and the list keeps a `tail` reference, which turns two
-  O(n) operations into O(1).
-* A treatment record stores the ID of the visit it created, which is what makes the
-  pop operation able to undo the whole treatment step.
-* Deleting a patient also removes them from the emergency queue, but keeps their treatment
-  records as an audit trail.
+### 3. The repository - 45 seconds (browser)
 
-## 8. What was learned - about 30 seconds
+Show the landing page, scroll the README, then click **Commits**.
 
-For example: choosing the structure that fits the access pattern (a tree for lookups by
-key, a queue for arrival order, a stack for undo, a list per patient for history); why an
-unbalanced BST can degrade to O(n) and how an AVL tree would fix it; and how much easier
-the deletion cases were to get right with tests that check the traversal after every
-delete.
+> "The project is on GitHub. The README documents the design and the complexity of each
+> operation, and the four screenshots here show one structure each - the full set of 23 is
+> in the docs folder.
+>
+> The commit history shows it was built in stages: the models first, then the binary search
+> tree, then the queue, the stack, the linked list, then the service layer that ties them
+> together, then the menu, the tests and the documentation."
+
+### 4. The four classes - 90 seconds (editor)
+
+One point per class - open the file, scroll to the named method, say the line.
+
+| Class             | Open              | Say                                                                                                                  |
+|-------------------|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| `PatientBST`      | `insertRecursive` | "Keyed on Patient ID. Everything left of a node is smaller, everything right is larger, so search is O(log n) and an in-order traversal comes out sorted for free." |
+| `EmergencyQueue`  | `enqueue`/`dequeue` | "Two references, front and rear. Arrivals attach at the rear, treatment takes from the front - that's FIFO, and keeping the rear reference makes both O(1)." |
+| `TreatmentStack`  | `push`/`pop`      | "Only the top reference moves, so push and pop are O(1), and the newest record is the first one back - which is what makes undo work." |
+| `VisitLinkedList` | `addVisit`        | "One list per patient. Each node holds a visit and a single next link. New visits append at the tail, so the history stays in date order." |
+
+### 5. The program running - about 4 minutes (terminal)
+
+Run each script with `record-demo.sh` and narrate the parts that matter.
+
+**BST** - `./docs/record-demo.sh docs/demo-scripts/01-bst-operations.txt 2`
+
+> * On the patient table: *"These were inserted in the order 105, 102, 108, 101 and so on,
+>   but they come out sorted by ID. That is the in-order traversal - no sorting code."*
+> * On the tree drawing: *"That's the actual tree on its side. 105 is the root, everything
+>   above it is the right subtree, everything below is the left."*
+> * On the search: *"Four comparisons to find patient 103 out of eight records, and the
+>   program prints the path it took."*
+> * On the delete of 102: *"102 had two children, so it is replaced by its in-order
+>   successor, 104 - and the listing afterwards is still in order."*
+
+**Queue** - `./docs/record-demo.sh docs/demo-scripts/02-emergency-queue.txt 2`
+
+> * On the queue table: *"Front of the queue at position 1. Peek shows who's next without
+>   removing them."*
+> * On the enqueue: *"The new patient joins at position 4, at the rear. Nobody jumps the
+>   line."*
+> * On the dequeue - **the key moment, slow down here**: *"Treating the patient does three
+>   things at once: the case leaves the front of the queue, a visit is appended to that
+>   patient's linked list, and a record is pushed onto the stack. One action, three
+>   structures."*
+> * On the empty queue: *"And when nobody is waiting it reports it properly instead of
+>   crashing - dequeue throws an exception that the menu catches."*
+
+**Stack** - `./docs/record-demo.sh docs/demo-scripts/03-treatment-stack.txt 2`
+
+> * *"Newest record at level 1. I push a record and it goes straight to the top; I pop and
+>   that same record is the first one back. Last in, first out."*
+> * On the empty stack: *"Same handling as the queue."*
+
+**Linked list** - `./docs/record-demo.sh docs/demo-scripts/04-visit-history.txt 2`
+
+> * *"This is one patient's history, oldest first. Adding appends at the tail. Searching
+>   walks the next links one at a time - linear, because unlike the tree there is no
+>   ordering to exploit."*
+> * On the remove: *"Removing V-001 unlinks the head node and the list closes up behind
+>   it."*
+
+**Tests** - switch to Terminal 2
+
+> *"And a test suite of 132 checks covering all four structures and the way they interact -
+> including all three BST deletion cases, each one checking the traversal is still sorted
+> afterwards."*
+
+### 6. Design decisions - 60 seconds
+
+Pick three or four. All are in the README under *Design decisions*.
+
+> * *"The Patient ID is final. It is the key the tree is sorted on, so if it could be
+>   edited the search would silently break - the update option deliberately doesn't offer
+>   it."*
+> * *"Dequeue, pop and peek throw an exception on an empty structure instead of returning
+>   null. Null is easy to forget to check; an exception isn't. The menu catches it and
+>   prints a plain message."*
+> * *"The queue keeps a rear reference and the list keeps a tail reference. That turns two
+>   O(n) operations into O(1)."*
+> * *"Each treatment record stores the ID of the visit it created, which is what lets
+>   popping a record undo the whole treatment step."*
+> * *"Deleting a patient also removes them from the queue, but keeps their treatment
+>   records - the stack is the audit trail."*
+
+### 7. What you learned - 30 seconds (webcam)
+
+> *"The main thing I took from this is that the structure should follow how the data is
+> actually used - a tree for lookups by key, a queue for arrival order, a stack for undo,
+> and a separate list per patient for history.
+>
+> The other thing is the limitation: my BST isn't balanced, so if patient IDs were inserted
+> in ascending order it would degrade into a chain and search would drop to O(n). An AVL
+> tree would fix that, and that's what I'd do next."*
 
 ---
 
@@ -125,8 +197,9 @@ delete.
 - [ ] Face visible during the introduction
 - [ ] GitHub repository and commit history shown
 - [ ] Each of the four structures explained
-- [ ] The program is demonstrated running
+- [ ] The program demonstrated running
 - [ ] BST, queue, stack and linked list operations all demonstrated
 - [ ] Design decisions explained
 - [ ] Reflection included
-- [ ] Audio is clear and the console text is readable at the recorded resolution
+- [ ] Audio clear, console text readable on playback
+- [ ] Video link added to the submission (and set so your marker can access it)
