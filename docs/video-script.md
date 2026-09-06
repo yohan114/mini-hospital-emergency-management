@@ -43,39 +43,49 @@ You should see `132 passed, 0 failed`. Leave that result on screen, it is used l
 ## Let the demo drive itself
 
 Instead of typing menu options live (slow, and easy to fumble on camera), play a demo
-script at talking pace and narrate over it:
+script at talking pace and narrate over it. The second argument is the seconds between
+inputs.
+
+**The four commands, in recording order.** Script 01 runs at `2.5` because it has the two
+frames a marker will actually want to read - the eight row patient table and the tree
+drawing. The rest run at `2`, where you are narrating continuously over the output.
 
 ```bash
-./docs/record-demo.sh docs/demo-scripts/01-bst-operations.txt 2
+./docs/record-demo.sh docs/demo-scripts/01-bst-operations.txt 2.5
 ```
 
-The second argument is the seconds between inputs. `2` is a good talking pace, `2.5` if you
-want more room.
+```bash
+./docs/record-demo.sh docs/demo-scripts/02-emergency-queue.txt 2
+```
 
-**Timing budget** (the marked values were measured, the rest are calculated from them):
+```bash
+./docs/record-demo.sh docs/demo-scripts/03-treatment-stack.txt 2
+```
 
-| Script                     | Shows                                    | at `2`      | at `2.5`    |
-|----------------------------|------------------------------------------|-------------|-------------|
-| `01-bst-operations.txt`    | BST insert, search, delete, traversal    | 56s *(measured)* | 70s *(measured)* |
-| `02-emergency-queue.txt`   | Queue enqueue, dequeue, peek, empty      | ~60s        | ~75s        |
-| `03-treatment-stack.txt`   | Stack push, pop, peek, empty             | 46s *(measured)* | ~57s   |
-| `04-visit-history.txt`     | Linked list add, search, remove          | ~56s        | ~70s        |
-| `05-full-workflow.txt`     | All four together, and undo              | ~71s        | ~88s        |
-| **01 to 04 together**      | **every operation**                      | **~3.6 min**| **~4.5 min**|
+```bash
+./docs/record-demo.sh docs/demo-scripts/04-visit-history.txt 2
+```
 
-Which pace to use:
+**Timing budget** (marked values were measured, the rest are calculated from them):
 
-* **`2`** leaves about 5 minutes for the talking sections, a total near 9 minutes. Use it
-  if you are narrating continuously over the output.
-* **`2.5`** gives the tables 25% longer on screen, and totals about 9.5 minutes - inside
-  the limit, but with only ~30 seconds of headroom. Use it if you want to pause and let a
-  table sit there, and keep the talking sections tight.
+| Script                     | Shows                                    | Pace  | Runtime          |
+|----------------------------|------------------------------------------|-------|------------------|
+| `01-bst-operations.txt`    | BST insert, search, delete, traversal    | `2.5` | 70s *(measured)* |
+| `02-emergency-queue.txt`   | Queue enqueue, dequeue, peek, empty      | `2`   | ~60s             |
+| `03-treatment-stack.txt`   | Stack push, pop, peek, empty             | `2`   | 46s *(measured)* |
+| `04-visit-history.txt`     | Linked list add, search, remove          | `2`   | ~56s             |
+| **All four**               | **every operation**                      |       | **~3.9 min**     |
 
-The biggest single burst is about 20 lines - a full patient table plus the next menu - so
-that is the moment the pace actually matters.
+That leaves about 5 minutes for the talking sections, for a total near **9 minutes** -
+inside the 5 to 10 limit with roughly a minute of headroom.
 
-Script 05 is optional; the dequeue step in script 02 already shows all three structures
-updating at once, so only add 05 if you are running short.
+The biggest single burst is about 20 lines, a full patient table plus the next menu, which
+is the moment the pace actually matters. Mixing paces between clips is invisible to the
+viewer.
+
+Script `05-full-workflow.txt` is optional (~71s at 2); the dequeue step in script 02
+already shows all three structures updating at once, so only add 05 if you are running
+short.
 
 ---
 
@@ -128,7 +138,7 @@ One point per class - open the file, scroll to the named method, say the line.
 
 Run each script with `record-demo.sh` and narrate the parts that matter.
 
-**BST** - `./docs/record-demo.sh docs/demo-scripts/01-bst-operations.txt 2`
+**BST** - `./docs/record-demo.sh docs/demo-scripts/01-bst-operations.txt 2.5`  (~70s)
 
 > * On the patient table: *"These were inserted in the order 105, 102, 108, 101 and so on,
 >   but they come out sorted by ID. That is the in-order traversal - no sorting code."*
@@ -139,7 +149,7 @@ Run each script with `record-demo.sh` and narrate the parts that matter.
 > * On the delete of 102: *"102 had two children, so it is replaced by its in-order
 >   successor, 104 - and the listing afterwards is still in order."*
 
-**Queue** - `./docs/record-demo.sh docs/demo-scripts/02-emergency-queue.txt 2`
+**Queue** - `./docs/record-demo.sh docs/demo-scripts/02-emergency-queue.txt 2`  (~60s)
 
 > * On the queue table: *"Front of the queue at position 1. Peek shows who's next without
 >   removing them."*
@@ -152,13 +162,13 @@ Run each script with `record-demo.sh` and narrate the parts that matter.
 > * On the empty queue: *"And when nobody is waiting it reports it properly instead of
 >   crashing - dequeue throws an exception that the menu catches."*
 
-**Stack** - `./docs/record-demo.sh docs/demo-scripts/03-treatment-stack.txt 2`
+**Stack** - `./docs/record-demo.sh docs/demo-scripts/03-treatment-stack.txt 2`  (~46s)
 
 > * *"Newest record at level 1. I push a record and it goes straight to the top; I pop and
 >   that same record is the first one back. Last in, first out."*
 > * On the empty stack: *"Same handling as the queue."*
 
-**Linked list** - `./docs/record-demo.sh docs/demo-scripts/04-visit-history.txt 2`
+**Linked list** - `./docs/record-demo.sh docs/demo-scripts/04-visit-history.txt 2`  (~56s)
 
 > * *"This is one patient's history, oldest first. Adding appends at the tail. Searching
 >   walks the next links one at a time - linear, because unlike the tree there is no
