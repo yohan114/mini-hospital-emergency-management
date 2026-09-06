@@ -52,20 +52,30 @@ script at talking pace and narrate over it:
 The second argument is the seconds between inputs. `2` is a good talking pace, `2.5` if you
 want more room.
 
-**Timing budget at 2 seconds per step:**
+**Timing budget** (the marked values were measured, the rest are calculated from them):
 
-| Script                     | Shows                                    | Runtime |
-|----------------------------|------------------------------------------|---------|
-| `01-bst-operations.txt`    | BST insert, search, delete, traversal    | ~55s    |
-| `02-emergency-queue.txt`   | Queue enqueue, dequeue, peek, empty      | ~59s    |
-| `03-treatment-stack.txt`   | Stack push, pop, peek, empty             | ~45s    |
-| `04-visit-history.txt`     | Linked list add, search, remove          | ~55s    |
-| `05-full-workflow.txt`     | All four together, and undo              | ~69s    |
+| Script                     | Shows                                    | at `2`      | at `2.5`    |
+|----------------------------|------------------------------------------|-------------|-------------|
+| `01-bst-operations.txt`    | BST insert, search, delete, traversal    | 56s *(measured)* | 70s *(measured)* |
+| `02-emergency-queue.txt`   | Queue enqueue, dequeue, peek, empty      | ~60s        | ~75s        |
+| `03-treatment-stack.txt`   | Stack push, pop, peek, empty             | 46s *(measured)* | ~57s   |
+| `04-visit-history.txt`     | Linked list add, search, remove          | ~56s        | ~70s        |
+| `05-full-workflow.txt`     | All four together, and undo              | ~71s        | ~88s        |
+| **01 to 04 together**      | **every operation**                      | **~3.6 min**| **~4.5 min**|
 
-Running **01 to 04 covers every operation in about 3.6 minutes**, which leaves roughly
-5 minutes for the talking sections - a total near 9 minutes. Script 05 is optional; the
-dequeue step in script 02 already shows all three structures updating at once, so only add
-05 if you are running short.
+Which pace to use:
+
+* **`2`** leaves about 5 minutes for the talking sections, a total near 9 minutes. Use it
+  if you are narrating continuously over the output.
+* **`2.5`** gives the tables 25% longer on screen, and totals about 9.5 minutes - inside
+  the limit, but with only ~30 seconds of headroom. Use it if you want to pause and let a
+  table sit there, and keep the talking sections tight.
+
+The biggest single burst is about 20 lines - a full patient table plus the next menu - so
+that is the moment the pace actually matters.
+
+Script 05 is optional; the dequeue step in script 02 already shows all three structures
+updating at once, so only add 05 if you are running short.
 
 ---
 
