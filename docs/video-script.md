@@ -91,7 +91,7 @@ short.
 
 ## Section by section
 
-The narration lines below are talking points, not a teleprompter. Say them in your own
+The word-for-word script is in [video-narration.md](video-narration.md). The lines below are talking points, not a teleprompter. Say them in your own
 words - and if there is a point you could not defend if the marker paused the video and
 asked about it, cut that line rather than reading it.
 
