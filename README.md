@@ -24,8 +24,8 @@ used anywhere in the system - only plain nodes and references.
 
 | Field        | Value                                     |
 |--------------|-------------------------------------------|
-| Student name | _fill in before submitting_               |
-| Student ID   | _fill in before submitting_               |
+| Student name | Yohan Udara                               |
+| Student ID   | 2296                                      |
 | Course       | CIT300 - Data Structures and Algorithms   |
 | Assignment   | Individual Mid Assignment                 |
 | Language     | Java (compiles on JDK 8 and newer, developed on JDK 21) |
