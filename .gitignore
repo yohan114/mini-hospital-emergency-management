@@ -24,3 +24,6 @@ Desktop.ini
 
 # Assignment brief (not part of the deliverable source)
 CIT300_Mid_Assignment*.pdf
+
+# Submission package (build artifact, regenerate with docs/build-submission.py)
+*.zip
