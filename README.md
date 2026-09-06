@@ -96,7 +96,7 @@ the emergency queue, so every operation can be demonstrated immediately.
 │       └── tests/
 │           └── DataStructureTests.java    132 checks, no external test library
 ├── docs/
-│   ├── screenshots/                       23 screenshots of the program output
+│   ├── screenshots/                       23 screenshots + a gallery README
 │   ├── sample-output/                     Full text transcripts of the demo runs
 │   ├── demo-scripts/                      Input files that produce those transcripts
 │   ├── video-script.md                    Plan for the demonstration video
@@ -313,68 +313,34 @@ than an exception.
 
 ## Screenshots
 
-All screenshots are in [`docs/screenshots`](docs/screenshots), and the complete text
-transcripts they come from are in [`docs/sample-output`](docs/sample-output).
+One screenshot per data structure is shown below. The full set of **23 screenshots**,
+covering every operation including insert, delete, enqueue, dequeue, push, pop, search,
+removal, the empty structure messages and the test run, is in the gallery at
+**[`docs/screenshots`](docs/screenshots)**. The complete text transcripts they come from
+are in [`docs/sample-output`](docs/sample-output).
 
-**Startup and sample data**
-
-![Startup and sample data](docs/screenshots/01-startup-and-sample-data.png)
-
-**BST - in-order traversal, patients in ascending order of ID**
+**Binary Search Tree - in-order traversal.** Patients were inserted in the order 105, 102,
+108, 101, 104, 107, 110, 103 and come back sorted by Patient ID with no sorting step.
 
 ![In-order traversal](docs/screenshots/02-bst-inorder-traversal.png)
 
-**BST - the tree itself, drawn on its side**
-
-![Tree structure](docs/screenshots/03-bst-tree-structure.png)
-
-**BST - search, showing the comparisons the search made**
-
-![BST search](docs/screenshots/05-bst-search.png)
-
-**BST - deleting a patient**
-
-![BST delete](docs/screenshots/06-bst-delete.png)
-
-**Queue - the waiting line, front first**
+**Queue - the emergency waiting line**, front of the queue first, and peek, which leaves
+the patient in place.
 
 ![Queue display](docs/screenshots/08-queue-display-and-peek.png)
 
-**Queue - treating the next patient (dequeue)**
-
-![Queue dequeue](docs/screenshots/10-queue-dequeue.png)
-
-**Queue - empty queue handling**
-
-![Empty queue](docs/screenshots/11-queue-empty-handling.png)
-
-**Stack - the treatment history, newest first**
+**Stack - the treatment history**, newest record at level 1.
 
 ![Stack display](docs/screenshots/12-stack-display.png)
 
-**Stack - pop, which also undoes the visit it created**
-
-![Stack pop](docs/screenshots/14-stack-pop.png)
-
-**Stack - empty stack handling**
-
-![Empty stack](docs/screenshots/15-stack-empty-handling.png)
-
-**Linked list - a patient's visit history**
+**Singly Linked List - one patient's visit history**, oldest visit first.
 
 ![Visit history](docs/screenshots/16-list-display-visits.png)
 
-**Linked list - removing a visit**
-
-![Remove visit](docs/screenshots/19-list-remove-visit.png)
-
-**All four structures in a single step**
-
-![Integration](docs/screenshots/20-integration-treatment.png)
-
-**Test suite**
-
-![Test suite](docs/screenshots/23-test-suite-result.png)
+> The remaining 19 screenshots - the tree drawing, BST insert/search/delete, enqueue and
+> dequeue, push and pop, adding and removing visits, the empty queue and empty stack
+> handling, the full integration workflow and the test result - are all in the
+> [screenshot gallery](docs/screenshots).
 
 ---
 
